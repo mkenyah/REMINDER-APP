@@ -1,0 +1,210 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+    color: #212121;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Reminder App Container */
+.reminder-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Style the logo image */
+.logo {
+    width: 80px; /* Adjust the size as needed */
+    height: 80px; /* Ensure the height and width are equal for a perfect circle */
+    border-radius: 50%; /* Make the image circular */
+    display: block; /* Ensures the image is displayed as a block element */
+    margin: 0 auto 20px auto; /* Center the image horizontally and add margin below */
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+  }
+  
+
+/* App Title */
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #1e88e5;
+    border-bottom: 2px solid #bbdefb;
+    padding-bottom: 10px;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 1.5rem;
+    color: #1565c0;
+    margin-bottom: 15px;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #1e88e5;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #1e88e5;
+    box-shadow: 0 0 5px rgba(30, 136, 229, 0.5);
+}
+
+/* Buttons */
+button {
+    background: #1e88e5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #1565c0;
+}
+
+/* Reminder Lists */
+.reminder-list ul, .completed-reminders ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reminder-list li, .completed-reminders li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f5f5f5;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s;
+}
+
+.reminder-list li:hover, .completed-reminders li:hover {
+    transform: scale(1.02);
+}
+
+.completed-reminders li {
+    background: #d7ffd9;
+    border-color: #81c784;
+}
+
+/* Reminder Buttons - Flex Layout */
+.reminder-list li div {
+    display: flex;
+    gap: 10px;
+}
+
+button.done {
+    background: #4caf50; /* Green for Done */
+}
+
+button.edit {
+    background: #ff9800; /* Orange for Edit */
+}
+
+button.delete {
+    background: #f44336; /* Red for Delete */
+}
+
+/* Hover Effects */
+button.done:hover {
+    background: #388e3c;
+}
+
+button.edit:hover {
+    background: #fb8c00;
+}
+
+button.delete:hover {
+    background: #d32f2f;
+}
+/* Style for the footer */
+ 
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .reminder-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    input, select, button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+}
+
+/* Style for the footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1; /* Optional: background color for the footer */
+  }
+  
+  .copyright {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
